@@ -25,7 +25,6 @@ from AviaxMusic.utils.database import (
     skip_off,
     skip_on,
 )
-from AviaxMusic.utils import bot_sys_stats
 from AviaxMusic.utils.decorators.admins import ActualAdminCB
 from AviaxMusic.utils.decorators.language import language, languageCB
 from AviaxMusic.utils.inline.settings import (
@@ -66,8 +65,7 @@ async def settings_cb(client, CallbackQuery, _):
         ),
         reply_markup=InlineKeyboardMarkup(buttons),
     )
-
-
+    
 @app.on_callback_query(filters.regex("settingsback_helper") & ~BANNED_USERS)
 @languageCB
 async def settings_back_markup(client, CallbackQuery: CallbackQuery, _):
@@ -79,9 +77,8 @@ async def settings_back_markup(client, CallbackQuery: CallbackQuery, _):
         await app.resolve_peer(OWNER_ID)
         OWNER = OWNER_ID
         buttons = private_panel(_)
-        UP, CPU, RAM, DISK = await bot_sys_stats()
         return await CallbackQuery.edit_message_text(
-            _["start_2"].format(CallbackQuery.from_user.mention, app.mention, UP, DISK, CPU, RAM),
+            _["start_2"].format(CallbackQuery.from_user.mention, app.mention),
             reply_markup=InlineKeyboardMarkup(buttons),
         )
     else:
