@@ -30,7 +30,7 @@ HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 # Get it from http://dashboard.heroku.com/account
 HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 
-API_URL = getenv("API_URL", 'https://api.nexgenbots.in') #youtube song url
+API_URL = getenv("API_URL", 'https://api.thequickearn.xyz') #youtube song url
 API_KEY = getenv("API_KEY", None) # youtube song api key, get it from https://t.me/RahulTC
 
 UPSTREAM_REPO = getenv(
@@ -42,8 +42,8 @@ GIT_TOKEN = getenv(
     "GIT_TOKEN", None
 )  # Fill this variable if your upstream repository is private
 
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/best_hindi_shayrii")
-SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/+sKb208JObOExNTJl")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/NexGenBots")
+SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/NexGenSpam")
 
 # Set this to True if you want the assistant to automatically leave chats after an interval
 AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", False))
@@ -84,10 +84,10 @@ confirmer = {}
 
 
 START_IMG_URL = getenv(
-    "START_IMG_URL", "https://files.catbox.moe/ms7xee.jpg"
+    "START_IMG_URL", "https://graph.org//file/25115719697ed91ef5672.jpg"
 )
 PING_IMG_URL = getenv(
-    "PING_IMG_URL", "https://telegra.ph/file/80e35d93784e239bdc86c.jpg"
+    "PING_IMG_URL", "https://graph.org//file/389a372e8ae039320ca6c.png"
 )
 PLAYLIST_IMG_URL = "https://graph.org//file/3dfcffd0c218ead96b102.png"
 STATS_IMG_URL = "https://graph.org//file/99a8a9c13bb01f9ac7d98.png"
